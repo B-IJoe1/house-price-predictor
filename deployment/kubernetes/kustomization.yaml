@@ -1,0 +1,9 @@
+# deployment/kubernetes/kustomization.yaml
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+resources:
+  - streamlit-svc.yaml
+  - streamlit-deploy.yaml
+  - model-svc.yaml
+  - model-deploy.yaml

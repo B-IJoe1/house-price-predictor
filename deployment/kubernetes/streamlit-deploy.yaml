@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: streamlit
+  name: streamlit
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: streamlit
+  strategy: {}
+  template:
+    metadata:
+      labels:
+        app: streamlit
+    spec:
+      containers:
+      - image: josephsevere/streamlit:v4:latest
+        name: streamlit
+        ports:
+        - containerPort: 8051
+        resources: {}
+status: {}

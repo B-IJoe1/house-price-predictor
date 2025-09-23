@@ -9,6 +9,8 @@ from sklearn.pipeline import Pipeline
 from sklearn.impute import SimpleImputer
 import joblib
 
+#This script creates new features from existing data for a machine learning project by transforming the dataset and encoding categorical variables.
+
 # Set up logging
 logging.basicConfig(
     level=logging.INFO,
