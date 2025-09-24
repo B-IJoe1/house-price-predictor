@@ -7,6 +7,8 @@ WORKDIR /app
 COPY src/api/ .
 
 
+RUN pip install --upgrade pip
+
 RUN pip install -r requirements.txt
 
 
