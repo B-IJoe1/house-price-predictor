@@ -4,6 +4,7 @@ import numpy as np
 from pathlib import Path
 import logging
 
+#This script processes raw data for a machine learning project to load, clean, and save the dataset.
 # Set up logging
 logging.basicConfig(
     level=logging.INFO,

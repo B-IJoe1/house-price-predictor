@@ -27,7 +27,7 @@ def predict_price(request: HousePredictionRequest) -> PredictionResponse:
     processed_features = preprocessor.transform(input_data)
 
     # Make prediction
-    predicted_price = model.predict(processed_features)[0]
+    predicted_price = model.predict(processed_features)[0] # Get the first (and only) prediction
 
     # Convert numpy.float32 to Python float and round to 2 decimal places
     predicted_price = round(float(predicted_price), 2)
@@ -38,7 +38,7 @@ def predict_price(request: HousePredictionRequest) -> PredictionResponse:
     # Convert confidence interval values to Python float and round to 2 decimal places
     confidence_interval = [round(float(value), 2) for value in confidence_interval]
 
-    return PredictionResponse(
+    return PredictionResponse( #returning the predicted response which will be sent to the API caller in main.py
         predicted_price=predicted_price,
         confidence_interval=confidence_interval,
         features_importance={},
@@ -59,4 +59,4 @@ def batch_predict(requests: list[HousePredictionRequest]) -> list[float]:
 
     # Make predictions
     predictions = model.predict(processed_features)
-    return predictions.tolist()
+    return predictions.tolist() 

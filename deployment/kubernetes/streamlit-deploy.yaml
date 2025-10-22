@@ -16,7 +16,7 @@ spec:
         app: streamlit
     spec:
       containers:
-      - image: josephsevere/streamlit:v4:latest
+      - image: josephsevere/streamlit:v4
         name: streamlit
         ports:
         - containerPort: 8051

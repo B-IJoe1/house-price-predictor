@@ -42,7 +42,6 @@ def start_metrics_server():
 
 threading.Thread(target=start_metrics_server, daemon=True).start()
 
-
 # Health check endpoint
 @app.get("/health", response_model=dict)
 async def health_check():
