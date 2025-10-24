@@ -13,7 +13,7 @@ st.set_page_config(
 )
 
 # Add title and description
-st.title("Housing Market Price")
+st.title("House Market Price Predictor")
 st.markdown(
     """
     <p style="font-size: 18px; color: gray;">
